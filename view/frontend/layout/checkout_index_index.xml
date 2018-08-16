@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Test_LoyaltyCardNumber
+ * @author  Nguyet Nguyen <nguyetnt.it@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="checkout.root">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="checkout" xsi:type="array">
+                            <item name="children" xsi:type="array">
+                                <item name="steps" xsi:type="array">
+                                    <item name="children" xsi:type="array">
+                                        <item name="billing-step" xsi:type="array">
+                                            <item name="children" xsi:type="array">
+                                                <item name="payment" xsi:type="array">
+                                                    <item name="children" xsi:type="array">
+                                                        <item name="additional-payment-validators" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="loyalty-card-number-validator" xsi:type="array">
+                                                                    <item name="component" xsi:type="string">Test_LoyaltyCardNumber/js/view/loyalty-card-number-validator</item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                        <item name="payments-list" xsi:type="array">
+                                                            <item name="children" xsi:type="array">
+                                                                <item name="before-place-order" xsi:type="array">
+                                                                    <item name="children" xsi:type="array">
+                                                                        <item name="loyalty-card-number" xsi:type="array">
+                                                                            <item name="component" xsi:type="string">Test_LoyaltyCardNumber/js/view/payment/loyalty-card-number</item>
+                                                                            <item name="sortOrder" xsi:type="string">50</item>
+                                                                            <item name="displayArea" xsi:type="string">before-place-order</item>
+                                                                            <item name="dataScope" xsi:type="string">loyaltyCardNumber</item>
+                                                                            <item name="provider" xsi:type="string">checkoutProvider</item>
+                                                                        </item>
+                                                                    </item>
+                                                                </item>
+                                                            </item>
+                                                        </item>
+                                                    </item>
+                                                </item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

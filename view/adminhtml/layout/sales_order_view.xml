@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Test_LoyaltyCardNumber
+ * @author  Nguyet Nguyen <nguyetnt.it@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="extra_customer_info">
+            <block class="Test\LoyaltyCardNumber\Block\Adminhtml\Sales\Order\View\LoyaltyCardNumber"
+                   name="order.info.loyaltycardnumber"
+                   template="Test_LoyaltyCardNumber::sales/order/view/info/loyalty-card-number.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

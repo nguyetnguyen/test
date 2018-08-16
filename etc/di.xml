@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package Test_LoyaltyCardNumber
+ * @author  Nguyet Nguyen <nguyetnt.it@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Magento\Checkout\Api\PaymentInformationManagementInterface">
+        <plugin name="set-card-number-into-quote" type="Test\LoyaltyCardNumber\Plugin\SavePaymentInformation"/>
+    </type>
+
+    <type name="Magento\Checkout\Api\GuestPaymentInformationManagementInterface">
+        <plugin name="set-card-number-into-quote-guest" type="Test\LoyaltyCardNumber\Plugin\GuestSavePaymentInformation"/>
+    </type>
+
+</config>
